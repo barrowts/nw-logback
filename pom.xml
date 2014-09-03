@@ -9,7 +9,7 @@
 	<name>logback-nw</name>
 
 	<url>http://maven.apache.org</url>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -19,7 +19,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>sap.com</groupId>
+			<groupId>com.sap.pi</groupId>
 			<artifactId>sap.com-tc-logging-java-impl</artifactId>
 			<version>7.31</version>
 		</dependency>
