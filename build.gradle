@@ -1,7 +1,7 @@
 apply plugin: 'git-dependencies'
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'maven'
+apply from: 'eclipse.gradle'
 
 group = 'com.barrowts'
 version = '0.0.1'
@@ -31,10 +31,3 @@ dependencies {
 	
 	testCompile 'junit:junit:4+'
 }
-
-eclipse {
-	project {
-		natures 'org.springsource.ide.eclipse.gradle.core.nature'
-	}
-}
-tasks.eclipse.dependsOn(cleanEclipse)

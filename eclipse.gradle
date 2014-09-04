@@ -1,0 +1,14 @@
+apply plugin: 'eclipse'
+
+eclipse {
+	project {
+		natures 'org.springsource.ide.eclipse.gradle.core.nature'
+	}
+	
+	def userHome = "$System.env.HOME"
+	//pathVariables 'GRADLE_HOME': file('/best/software/gradle'), 'TOMCAT_HOME': file('../tomcat')
+	pathVariables 'M2_REPO': file("$userHome/.m2/repository"), 'GRADLE_CACHES': file("$userHome/.gradle/caches")
+	
+	
+}
+tasks.eclipse.dependsOn(cleanEclipse)
