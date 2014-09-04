@@ -1,0 +1,40 @@
+apply plugin: 'git-dependencies'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+group = 'com.barrowts'
+version = '0.0.1'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.batcha.gradle.plugins:git-dependencies:0.2'
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+	
+	compile (
+		'com.sap.pi:sap.com-tc-logging-java-impl:7+',
+		'ch.qos.logback:logback-access:1+',
+		'ch.qos.logback:logback-core:1+',
+		'ch.qos.logback:logback-classic:1+'
+	)
+	
+	testCompile 'junit:junit:4+'
+}
+
+eclipse {
+	project {
+		natures 'org.springsource.ide.eclipse.gradle.core.nature'
+	}
+}
+tasks.eclipse.dependsOn(cleanEclipse)
