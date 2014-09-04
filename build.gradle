@@ -6,6 +6,8 @@ apply from: 'eclipse.gradle'
 group = 'com.barrowts'
 version = '0.0.1'
 
+buildDir = '.build'
+
 buildscript {
     repositories {
         mavenCentral()
