@@ -5,7 +5,6 @@ apply from: 'eclipse.gradle'
 
 group = 'com.barrowts'
 version = '0.0.1'
-
 buildDir = '.build'
 
 buildscript {
@@ -25,11 +24,14 @@ repositories {
 dependencies {
 	
 	compile (
-		'com.sap.pi:sap.com-tc-logging-java-impl:7+',
 		'ch.qos.logback:logback-access:1+',
 		'ch.qos.logback:logback-core:1+',
 		'ch.qos.logback:logback-classic:1+'
 	)
+
+	compile ('com.sap.pi:sap.com-tc-logging-java-impl:7+') {
+		transitive = false
+	}
 	
 	testCompile 'junit:junit:4+'
 }
