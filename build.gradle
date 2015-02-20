@@ -3,7 +3,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply from: 'eclipse.gradle'
 
-group = 'com.barrowts'
+group = 'com.barrowts.tools.nw'
 version = '1.0.0'
 buildDir = '.build'
 
