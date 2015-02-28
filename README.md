@@ -10,7 +10,15 @@ Latest Version: 0.0.1
 - Logback Jar files
 - SAP NW Logging API Jar
 
-The logback jar files are sourced from maven central by gradle. However the SAP jar files are not stored in a publically accessible repository. Clone the git repo at [https://bitbucket.org/barrowts/sap-nw-jars](https://bitbucket.org/barrowts/sap-nw-jars) and follow its instructions for installing into local maven repo.
+The logback jar files are sourced from maven central by gradle. However the SAP jar logging file is not stored in a publicly accessible repository. Install them into your local maven using the following command, changing the version as desired.
+
+	mvn install:install-file /
+		-Dfile="sap.com~tc~logging~java~impl.jar" /
+		-DgroupId="com.sap.pi" /
+		-DartifactId="sap.com-tc-logging-java-impl" /
+		-Dversion="7.31" /
+		-Dpackaging=jar
+
 
 
 ## Local Maven Repo Install ##
